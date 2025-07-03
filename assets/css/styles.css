@@ -1,0 +1,21 @@
+/* styles.css */
+.hero-section {
+    background-color: #34495e; /* Un azul oscuro como alternativa a una imagen */
+    /* Si quieres una imagen de fondo, descomenta y ajusta: */
+    /*
+    background-image: url('../img/fondo-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    */
+    min-height: 70vh; /* Asegura que la sección ocupe al menos el 70% del alto de la ventana */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+}
+.custom-btn-primary {
+    background-color: #28a745; /* Un verde más vibrante para el botón */
+    border-color: #28a745;
+}
+.custom-btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
