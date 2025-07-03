@@ -10,98 +10,93 @@
     <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header class="header bg-dark text-white py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-        <div class="header__branding">
-            <a href="index.html" class="branding__link d-flex align-items-center text-decoration-none text-white">
-                <img class="logo me-2" src="./assets/img/logo-focus.png" alt="Logo Tienda Focus" style="height: 40px;">
-                <span class="fs-4 fw-bold">Focus - Sonido & Tech</span>
-            </a>
+    <header class="main-header bg-dark"> <a href="index.html" class="header-logo-link d-block"> <img src="./assets/img/logo-focus.png" alt="Logo Focus Sonido & Tech" class="img-fluid header-logo-img">
+        </a>
+</header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-custom py-2"> <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active" aria-current="page">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="catalogo.html" class="nav-link">Catálogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="acerca.html" class="nav-link">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contacto.html" class="nav-link">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cuestionario.html" class="nav-link">Cuestionario</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <nav class="nav collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav flex-row flex-wrap">
-                <li class="nav-item me-3 mb-2 mb-lg-0">
-                    <a href="index.html" class="nav-link text-white active" aria-current="page">Inicio</a>
-                </li>
-                <li class="nav-item me-3 mb-2 mb-lg-0">
-                    <a href="catalogo.html" class="nav-link text-white">Catálogo</a>
-                </li>
-                <li class="nav-item me-3 mb-2 mb-lg-0">
-                    <a href="acerca.html" class="nav-link text-white">Acerca de</a>
-                </li>
-                <li class="nav-item me-3 mb-2 mb-lg-0">
-                    <a href="contacto.html" class="nav-link text-white">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a href="cuestionario.html" class="nav-link text-white">Cuestionario</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>  
+    </nav>
+  
 <main>
-        <section class="hero-section text-white text-center py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
-                        <h1 class="display-3 fw-bold mb-3">Descubre la Nueva Dimensión del Sonido y la Tecnología</h1>
-                        <p class="lead mb-4">
-                            En **Tienda Focus**, somos tu destino para lo último en audio de alta fidelidad,
-                            dispositivos inteligentes y soluciones tecnológicas innovadoras. Prepárate para
-                            experimentar la calidad y el futuro hoy.
-                        </p>
-                        <a href="cuestionario.html" class="btn btn-primary btn-lg custom-btn-primary">
-                            Encuentra tu Tech Ideal
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <img src="./assets/img/hero-tech.jpg" class="img-fluid rounded shadow-lg" alt="Tecnología de Punta">
-                    </div>
+    <section class="hero-section text-white text-center py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <h1 class="display-3 fw-bold mb-3">Tu Sonido, Tu Futuro: Desbloquea la Experiencia Focus.</h1>
+                    <p class="lead mb-4">
+                        En **Focus**, olvidémonos de lo aburrido. Aquí conectas con lo último en audio que te eriza la piel y tecnología tan inteligente que casi lee tu mente.
+                        Prepárate para sentir la diferencia y vivir el hoy con un pie en el mañana.
+                    </p>
+                    <a href="catalogo.html" class="btn btn-primary btn-lg custom-btn-primary">
+                        Explora la Magia Ahora
+                    </a>
                 </div>
-            </div>
-        </section>
-        </main>
-</body>
-<footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="text-uppercase mb-3">Focus - Sonido & Tech</h5>
-                    <p>Tu destino para la tecnología de punta y el sonido de alta fidelidad.</p>
+                <div class="col-lg-6 col-md-12">
+                    <img src="assets/img/AppleW9.jpg" class="img-fluid rounded shadow-lg" alt="Innovación en tus manos">
                 </div>
-
-                <div class="col-md-4 mb-3">
-                    <h5 class="text-uppercase mb-3">Enlaces rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
-                        <li><a href="catalogo.html" class="text-white text-decoration-none">Catálogo</a></li>
-                        <li><a href="acerca.html" class="text-white text-decoration-none">Acerca de</a></li>
-                        <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
-                        <li><a href="cuestionario.html" class="text-white text-decoration-none">Cuestionario</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 mb-3">
-                    <h5 class="text-uppercase mb-3">Síguenos</h5>
-                    <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
-                    <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
-                    <a href="#" class="text-white" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
-                </div>
-            </div>
-            <hr class="bg-light my-4">
-            <div class="text-center">
-                <p>&copy; 2024 Focus - Sonido & Tech. Todos los derechos reservados.</p>
             </div>
         </div>
-    </footer>
+    </section>
+</main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="./assets/js/main.js"></script>
+<footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase mb-3">Focus - Sonido & Tech</h5>
+                <p>Tu destino para la tecnología de punta y el sonido de alta fidelidad.</p>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase mb-3">Enlaces rápidos</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+                    <li><a href="catalogo.html" class="text-white text-decoration-none">Catálogo</a></li>
+                    <li><a href="acerca.html" class="text-white text-decoration-none">Acerca de</a></li>
+                    <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+                    <li><a href="cuestionario.html" class="text-white text-decoration-none">Cuestionario</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase mb-3">Síguenos</h5>
+                <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#" class="text-white" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+        <hr class="bg-light my-4">
+        <div class="text-center">
+            <p>&copy; 2024 Focus - Sonido & Tech. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="./assets/js/main.js"></script>
 
 </body>
 </html>

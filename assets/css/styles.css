@@ -1,21 +1,92 @@
-/* styles.css */
+
+/* Estilos para el HEADER PRINCIPAL (donde va la imagen de marca) */
+.main-header {
+    background-color: #000; /* Mantén el color de fondo */
+    padding: 0; /* <--- ¡Este es el cambio clave! Elimina el padding que limitaba el espacio de la imagen */
+    display: flex; /* Para un buen control del centrado */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    overflow: hidden; /* Importante para evitar barras de desplazamiento si la imagen es muy grande */
+    max-height: 230px; /* Puedes ajustar este valor si quieres un header mínimo, o quitarlo si la imagen define la altura */
+}
+
+/* El resto de tus estilos para .header-logo-link y .header-logo-img */
+.header-logo-link {
+    display: block;
+    width: 100%;
+    line-height: 0;
+    text-align: center;
+}
+
+.header-logo-img {
+    width: 100%;
+    height: 200;
+    max-height: none; /* O un valor en px como 180px, 200px si quieres limitar la altura */
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para la BARRA DE NAVEGACIÓN debajo del header */
+.bg-dark-custom {
+    background-color: #696464; /* Un negro ligeramente diferente al header, o puedes usar #212529 para el de Bootstrap */
+    /* background-color: var(--dark-color);  Podrías usar una variable si la definiste en :root */
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding: 0.5rem 1rem; /* Ajusta el padding de los enlaces si lo ves necesario */
+    color: rgba(255, 255, 255, 0.75); /* Color de texto base (más suave) */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+    color: var(--highlight-color, #3498db); /* Color al pasar el mouse y para el activo (ej. azul Bootstrap o tu highlight) */
+}
+
+/* Puedes mantener tus estilos .hero-section y .custom-btn-primary como los tenías */
+/* ... tus estilos existentes ... */
+
+
 .hero-section {
-    background-color: #34495e; /* Un azul oscuro como alternativa a una imagen */
-    /* Si quieres una imagen de fondo, descomenta y ajusta: */
-    /*
-    background-image: url('../img/fondo-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    */
-    min-height: 70vh; /* Asegura que la sección ocupe al menos el 70% del alto de la ventana */
+    background-image: url('../img/BannerGrande.jpg'); /* Asegúrate de que esta ruta sea correcta */
+    background-size: cover; /* Cubre todo el área de la sección */
+    background-position: center; /* Centra la imagen de fondo */
+    position: relative; /* Necesario para posicionar el pseudo-elemento ::before */
+    min-height: 70vh; /* Ajusta según lo deseado, 70% del viewport height */
     display: flex;
     align-items: center; /* Centra el contenido verticalmente */
+    z-index: 1; /* Asegura que el contenido esté por encima del overlay */
+    padding-top: 5rem; /* Ajusta el padding superior si el fondo es muy grande */
+    padding-bottom: 5rem; /* Ajusta el padding inferior */
 }
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con 50% de opacidad */
+    z-index: -1; /* Coloca el overlay debajo del contenido */
+}
+
+.hero-section .container {
+    position: relative; /* Asegura que el contenido dentro del container esté sobre el overlay */
+    z-index: 2; /* Mayor que el z-index del ::before */
+}
+
+/* Opcional: ajustar el color del botón si es necesario para contrastar con el fondo */
 .custom-btn-primary {
-    background-color: #28a745; /* Un verde más vibrante para el botón */
-    border-color: #28a745;
+    background-color: #9fbee0; /* Un azul de Bootstrap como ejemplo */
+    border-color: #007bff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 .custom-btn-primary:hover {
-    background-color: #218838;
-    border-color: #1e7e34;
+    background-color: #0056b3;
+    border-color: #b39200;
 }
