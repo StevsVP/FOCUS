@@ -35,6 +35,7 @@ body {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
   text-align: center;
   padding: 2rem;
+  transition: opacity 0.5s ease;
 }
 
 #hero-banner h1 {
@@ -107,8 +108,14 @@ img.img-fluid {
    Navbar y efecto scroll
 ------------------------- */
 .navbar {
-  background-color: var(--dark-color);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.navbar.show-navbar {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .navbar-scroll {
@@ -127,6 +134,19 @@ img.img-fluid {
   color: #ffffff;
   border-bottom: 2px solid #ffffff;
 }
+
+/* Main oculto al inicio y con animación */
+main {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+main.show-main {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* -------------------------
    Footer

@@ -129,6 +129,44 @@
 
 <!-- JS personalizado -->
 <script src="./assets/js/main.js"></script>
+
+<!--Desvanecer -->
+<script>
+  window.addEventListener('scroll', function () {
+    const banner = document.getElementById('hero-banner');
+    const scrollTop = window.scrollY;
+    const maxScroll = 300; // altura máxima para desvanecer
+
+    let opacity = 1 - (scrollTop / maxScroll);
+    if (opacity < 0) opacity = 0;
+
+    banner.style.opacity = opacity;
+  });
+</script>
+
+<!--Desvanecer nav y main -->
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.navbar');
+    const main = document.querySelector('main');
+
+    if (window.scrollY > 50) {
+      navbar.classList.add('show-navbar');
+      main.classList.add('show-main');
+    } else {
+      navbar.classList.remove('show-navbar');
+      main.classList.remove('show-main');
+    }
+  });
+
+  window.addEventListener('load', function () {
+    if (window.scrollY > 50) {
+      document.querySelector('.navbar').classList.add('show-navbar');
+      document.querySelector('main').classList.add('show-main');
+    }
+  });
+</script>
+
 </body>
 </html>
 
