@@ -28,34 +28,3 @@ function mostrarDetalle(nombre, descripcion, categoria, precio, imagen) {
   img.alt = nombre;
 }
 
-//Formulario Mensaje Exito Envio
-<script>
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Previene el envío real
-
-    // Opcional: validar campos si es necesario (ya son "required", pero por si acaso)
-    const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const mensaje = document.getElementById("mensaje").value.trim();
-
-    if (!nombre || !email || !mensaje) {
-      Swal.fire({
-        icon: "warning",
-        title: "Campos incompletos",
-        text: "Por favor completa todos los campos.",
-      });
-      return;
-    }
-
-    // Mostrar mensaje de éxito
-    Swal.fire({
-      icon: "success",
-      title: "Gracias",
-      text: "Tu mensaje fue enviado con éxito.",
-      confirmButtonText: "Cerrar",
-    });
-
-    // Limpia el formulario después de enviar
-    document.getElementById("contact-form").reset();
-  });
-</script>

@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link rel="stylesheet" href="./assets/css/styles.css" />
   <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+<!-- jQuery (necesario para Fancybox) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Fancybox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+<!-- Fancybox JS -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 </head>
 <body>
 
@@ -80,7 +86,9 @@
 <div class="col-md-6 col-lg-3">
   <div class="card h-100 shadow">
     <div class="p-2">
+      <a data-fancybox="gallery" href="assets/img/SonnyXM5.webp">  
       <img src="assets/img/SonnyXM5.webp" class="card-img" alt="Auriculares X Pro" />
+      </a>
     </div>
     <div class="card-body text-center">
       <h5 class="card-title">Sony WH-1000XM5</h5>
@@ -108,7 +116,9 @@
 <div class="col-md-6 col-lg-3">
   <div class="card h-100 shadow">
     <div class="p-2">
+      <a data-fancybox="gallery" href="assets/img/Era300.png">
       <img src="assets/img/Era300.png" class="card-img" alt="Parlante Focus GO" />
+      </a>
     </div>
     <div class="card-body text-center">
       <h5 class="card-title">Sonos Era 300</h5>
@@ -135,7 +145,9 @@
 <div class="col-md-6 col-lg-3">
   <div class="card h-100 shadow">
     <div class="p-2">
+      <a data-fancybox="gallery" href="assets/img/AppleW9.jpg">
       <img src="assets/img/AppleW9.jpg" class="card-img" alt="Smartwatch Alpha" />
+      </a>
     </div>
     <div class="card-body text-center">
       <h5 class="card-title">Apple Watch Series 9</h5>
@@ -162,7 +174,9 @@
 <div class="col-md-6 col-lg-3">
   <div class="card h-100 shadow">
     <div class="p-2">
+      <a data-fancybox="gallery" href="assets/img/Proyector.JPG">
       <img src="assets/img/Proyector.JPG" class="card-img" alt="Estación Dock Pro" />
+      </a>
     </div>
     <div class="card-body text-center">
       <h5 class="card-title">Samsung The Freestyle Gen 2</h5>
@@ -217,5 +231,14 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/main.js"></script>
+<script>
+  // Personalizar Fancybox
+  Fancybox.bind("[data-fancybox='gallery']", {
+    animated: true,
+    showClass: "fancybox-zoomInUp",
+    hideClass: "fancybox-zoomOutDown"
+  });
+</script>
+
 </body>
 </html>
