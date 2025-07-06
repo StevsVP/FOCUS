@@ -24,7 +24,7 @@
 </header>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -37,11 +37,6 @@
         <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de</a></li>
         <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
         <li class="nav-item ms-3">
-          <button id="cart-button" class="btn btn-outline-light position-relative" aria-label="Carrito">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count-navbar" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
-          </button>
-        </li>
       </ul>
     </div>
   </div>
@@ -239,6 +234,36 @@
     hideClass: "fancybox-zoomOutDown"
   });
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector("main").classList.add("show-main");
+  });
+</script>
+
+
+
+
+<script>
+  const modalFix = () => {
+    const backdrop = document.querySelector('.modal-backdrop');
+    if (backdrop) backdrop.remove();
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = 'auto';
+  };
+
+  const detalleModal = document.getElementById('detalleModal');
+  detalleModal.addEventListener('shown.bs.modal', modalFix);
+  detalleModal.addEventListener('hidden.bs.modal', modalFix);
+</script>
+
+<!--Correción Navbar invisible-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".navbar").classList.add("show-navbar");
+  });
+</script>
+
 
 </body>
 </html>

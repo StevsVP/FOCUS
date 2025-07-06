@@ -28,3 +28,29 @@ function mostrarDetalle(nombre, descripcion, categoria, precio, imagen) {
   img.alt = nombre;
 }
 
+//Retraso animacion
+setTimeout(() => {
+  document.querySelector("main").classList.add("show-main");
+}, 200); // espera 200ms
+
+//Fancy
+// Mostrar navbar al cargar y aplicar efecto scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector(".navbar");
+
+  // Mostrar con animación
+  navbar.classList.add("show-navbar");
+
+  // Efecto de scroll
+  window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("navbar-scroll");
+    } else {
+      navbar.classList.remove("navbar-scroll");
+    }
+  });
+});
+
+
+

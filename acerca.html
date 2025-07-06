@@ -5,15 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acerca de | Focus - Sonido & Tech</title>
 
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="./assets/css/styles.css" />
+
+  <!-- Fancybox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+  <!-- Favicon -->
   <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -26,11 +36,6 @@
         <li class="nav-item"><a href="acerca.html" class="nav-link active">Acerca de</a></li>
         <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
         <li class="nav-item ms-3">
-          <button id="cart-button" class="btn btn-outline-light position-relative">
-            <i class="fas fa-shopping-cart"></i>
-            <span id="cart-count-navbar" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none;">0</span>
-          </button>
-        </li>
       </ul>
     </div>
   </div>
@@ -53,7 +58,9 @@
         </p>
       </div>
       <div class="col-lg-6">
-        <img src="assets/img/Acerca.jpeg" alt="Equipo Focus trabajando" class="img-fluid rounded shadow-lg">
+        <a data-fancybox="gallery" href="assets/img/Acerca.jpeg">
+          <img src="assets/img/Acerca.jpeg" alt="Equipo Focus trabajando" class="img-fluid rounded shadow-lg" />
+        </a>
       </div>
     </div>
   </div>
@@ -88,7 +95,32 @@
   </div>
 </footer>
 
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 <script src="./assets/js/main.js"></script>
+
+<!-- Correcciones: animación de navbar + fondo al hacer scroll -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    const main = document.querySelector("main");
+
+    if (main) main.classList.add("show-main");
+    if (navbar) navbar.classList.add("show-navbar");
+
+    // Agrega fondo oscuro y sombra al hacer scroll
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add("navbar-scroll");
+      } else {
+        navbar.classList.remove("navbar-scroll");
+      }
+    });
+  });
+</script>
+
+
 </body>
 </html>
+
