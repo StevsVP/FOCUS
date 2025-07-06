@@ -47,68 +47,143 @@
     <h1 class="text-center mb-5 fw-bold">Catálogo Focus</h1>
     <div class="row g-4">
 
-      <!-- Producto 1 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="p-2">
-           <img src="assets/img/SonnyXM5.webp" class="card-img" alt="Auriculares X Pro" />
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Sony WH-1000XM5</h5>
-            <p class="card-text text-muted">Sonido envolvente, cancelación de ruido activa y diseño premium.</p>
-            <p class="fw-semibold">🎧 Audio | $398.00</p>
-            <button class="btn btn-primary custom-btn-primary">Agregar al carrito</button>
-          </div>
-        </div>
+<!-- Modal detalles producto -->
+<div class="modal fade" id="detalleModal" tabindex="-1" aria-labelledby="detalleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detalleModalLabel">Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
-
-      <!-- Producto 2 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="p-2">
-          <img src="assets/img/Era300.png" class="card-img" alt="Parlante Focus GO" />
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Sonos Era 300</h5>
-            <p class="card-text text-muted">Compacto, resistente al agua y con bass potente. Ideal para exteriores.</p>
-            <p class="fw-semibold">🔊 Audio | $448.00</p>
-            <button class="btn btn-primary custom-btn-primary">Agregar al carrito</button>
-          </div>
-        </div>
+      <div class="modal-body text-center">
+        <img id="detalle-img" src="" alt="" class="img-fluid mb-3" style="max-height: 200px; object-fit: contain;" />
+        <p id="detalle-desc" class="text-muted"></p>
+        <p id="detalle-cat" class="fw-semibold"></p>
+        <p id="detalle-precio" class="fw-bold fs-5"></p>
       </div>
-
-      <!-- Producto 3 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="p-2">
-          <img src="assets/img/AppleW9.jpg" class="card-img-top" alt="Smartwatch Alpha" />
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Apple Watch Series 9</h5>
-            <p class="card-text text-muted">Estilo y tecnología en tu muñeca. Monitor de salud + integración total.</p>
-            <p class="fw-semibold">⌚ Tech | $399.00</p>
-            <button class="btn btn-primary custom-btn-primary">Agregar al carrito</button>
-          </div>
-        </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="btn-agregar-carrito"
+          onclick="alert('Próximamente')"
+        >
+          Agregar al Carrito
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
-
-      <!-- Producto 4 -->
-      <div class="col-md-6 col-lg-3">
-        <div class="card h-100 shadow">
-          <div class="p-2">
-          <img src="assets/img/Proyector.JPG" class="card-img" alt="Estación Dock Pro" />
-          </div>
-          <div class="card-body text-center">
-            <h5 class="card-title">Samsung The Freestyle Gen 2</h5>
-            <p class="card-text text-muted">Proyector compacto y versátil con Tizen OS, auto-alineación y sonido 360°, ideal para entretenimiento en cualquier lugar.</p>
-            <p class="fw-semibold">🔌 Tech | $799.99</p>
-            <button class="btn btn-primary custom-btn-primary">Agregar al carrito</button>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
+</div>
+
+<!-- Producto ejemplo -->
+<div class="col-md-6 col-lg-3">
+  <div class="card h-100 shadow">
+    <div class="p-2">
+      <img src="assets/img/SonnyXM5.webp" class="card-img" alt="Auriculares X Pro" />
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title">Sony WH-1000XM5</h5>
+      <!-- Ocultamos descripción y precio -->
+      <button
+        class="btn btn-primary custom-btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#detalleModal"
+        onclick="mostrarDetalle(
+          'Sony WH-1000XM5',
+          'Sonido envolvente, cancelación de ruido activa y diseño premium.',
+          '🎧 Audio',
+          '$398.00',
+          'assets/img/SonnyXM5.webp'
+        )"
+      >
+        Más Detalles
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Producto 2 -->
+<div class="col-md-6 col-lg-3">
+  <div class="card h-100 shadow">
+    <div class="p-2">
+      <img src="assets/img/Era300.png" class="card-img" alt="Parlante Focus GO" />
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title">Sonos Era 300</h5>
+      <!-- Ocultamos descripción y precio -->
+      <button
+        class="btn btn-primary custom-btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#detalleModal"
+        onclick="mostrarDetalle(
+          'Sonos Era 300',
+          'Compacto, resistente al agua y con bass potente. Ideal para exteriores.',
+          '🔊 Audio',
+          '$448.00',
+          'assets/img/Era300.png'
+        )"
+      >
+        Más Detalles
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Producto 3 -->
+<div class="col-md-6 col-lg-3">
+  <div class="card h-100 shadow">
+    <div class="p-2">
+      <img src="assets/img/AppleW9.jpg" class="card-img" alt="Smartwatch Alpha" />
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title">Apple Watch Series 9</h5>
+      <!-- Ocultamos descripción y precio -->
+      <button
+        class="btn btn-primary custom-btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#detalleModal"
+        onclick="mostrarDetalle(
+          'Apple Watch Series 9',
+          'Estilo y tecnología en tu muñeca. Monitor de salud + integración total.',
+          '⌚ Tech',
+          '$399.00',
+          'assets/img/AppleW9.jpg'
+        )"
+      >
+        Más Detalles
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Producto 4 -->
+<div class="col-md-6 col-lg-3">
+  <div class="card h-100 shadow">
+    <div class="p-2">
+      <img src="assets/img/Proyector.JPG" class="card-img" alt="Estación Dock Pro" />
+    </div>
+    <div class="card-body text-center">
+      <h5 class="card-title">Samsung The Freestyle Gen 2</h5>
+      <!-- Ocultamos descripción y precio -->
+      <button
+        class="btn btn-primary custom-btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#detalleModal"
+        onclick="mostrarDetalle(
+          'Samsung The Freestyle Gen 2',
+          'Proyector compacto y versátil con Tizen OS, auto-alineación y sonido 360°, ideal para entretenimiento en cualquier lugar.',
+          '🔌 Tech',
+          '$799.99',
+          'assets/img/Proyector.JPG'
+        )"
+      >
+        Más Detalles
+      </button>
+    </div>
+  </div>
+</div>
 </main>
 
 <!-- Footer -->
