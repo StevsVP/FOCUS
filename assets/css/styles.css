@@ -2,7 +2,7 @@
    Paleta moderna estilo Apple
 ------------------------- */
 :root {
-  --primary-color: #0a84ff;
+  --primary-color: #0d549c;
   --secondary-color: #2c2c2e;
   --bg-color: #f2f2f7;
   --dark-color: #1c1c1e;
@@ -92,7 +92,7 @@ img.img-fluid {
    Navbar y efecto scroll
 ------------------------- */
 .navbar {
-  background-color: black;
+  background-color: var(--dark-color);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
