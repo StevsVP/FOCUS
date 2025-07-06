@@ -92,7 +92,7 @@ img.img-fluid {
    Navbar y efecto scroll
 ------------------------- */
 .navbar {
-  background-color: transparent;
+  background-color: black;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
